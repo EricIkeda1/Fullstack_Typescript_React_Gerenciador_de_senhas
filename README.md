@@ -4,8 +4,6 @@ Um gerador de senhas seguro e customizável com frontend moderno em **React + Vi
 
 Permite criar senhas aleatórias com letras maiúsculas, minúsculas, números e símbolos, com comprimento personalizável via interface.
 
-<img width="1630" height="285" alt="image" src="https://github.com/user-attachments/assets/e08b5daa-dcf2-4aa6-b9d0-42c02ebdd93a" />
-
 ---
 
 ## 🚀 Funcionalidades
@@ -32,6 +30,8 @@ Gerador_De_Senhas_Rust/
 │ └── index.html
 │ └── vite.config.ts
 ```
+
+<img width="1630" height="285" alt="image" src="https://github.com/user-attachments/assets/e08b5daa-dcf2-4aa6-b9d0-42c02ebdd93a" />
 
 ---
 
