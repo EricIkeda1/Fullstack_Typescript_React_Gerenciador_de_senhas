@@ -1,0 +1,1 @@
+# Gerador_De_Senhas_Rust
