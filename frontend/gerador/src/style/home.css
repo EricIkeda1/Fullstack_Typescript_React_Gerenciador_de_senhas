@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #333; 
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.rangeInput {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #333; 
+  font-size: 14px;
+}
+
+.buttonGenerate {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  font-weight: bold;
+}
+
+.buttonGenerate:hover {
+  background-color: #333;
+}
+
+.errorText {
+  color: red;
+  margin-top: 10px;
+}
+
+.passwordResult {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e9f5ff;
+  border: 1px solid #bcdffb;
+  border-radius: 8px;
+  font-size: 18px;
+  word-break: break-word;
+  font-family: monospace;
+  user-select: all;
+  color: #333;
+}
