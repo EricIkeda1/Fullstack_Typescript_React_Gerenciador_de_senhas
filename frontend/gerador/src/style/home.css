@@ -99,6 +99,14 @@ body {
   font-size: 15px;
 }
 
+.checkboxLabel input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #6e8efb;
+  margin: 0;
+}
+
 .buttonGenerate {
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
@@ -110,10 +118,18 @@ body {
   transition: all 0.3s ease;
   width: 100%;
   animation: pulse 1.8s infinite;
+  user-select: none;
 }
 
 .buttonGenerate:hover {
   filter: brightness(1.1);
+}
+
+.buttonGenerate:disabled {
+  background: #a3b2fc;
+  cursor: not-allowed;
+  animation: none;
+  filter: none;
 }
 
 .errorText {
@@ -148,6 +164,7 @@ body {
   cursor: pointer;
   font-size: 14px;
   transition: background 0.3s, transform 0.1s;
+  user-select: none;
 }
 
 .copyButton:hover {
@@ -166,6 +183,7 @@ body {
   text-align: center;
   font-size: 14px;
   animation: fadeIn 0.4s ease-in-out;
+  user-select: none;
 }
 
 .passwordStrength.fraca {
@@ -181,6 +199,55 @@ body {
 .passwordStrength.forte {
   background-color: #e0ffe0;
   color: #27ae60;
+}
+
+.modeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.modeButtons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #e1e4ff;
+  color: #444;
+  user-select: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modeButtons button.active {
+  background-color: #6e8efb;
+  color: white;
+  box-shadow: 0 0 8px rgba(110,142,251,0.7);
+}
+
+.modeButtons button:hover:not(.active) {
+  background-color: #c7cdfb;
+}
+
+.separatorInput {
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  width: 60px;
+  font-size: 1rem;
+  text-align: center;
+  color: #333;
+  transition: border-color 0.25s ease;
+  user-select: text;
+  margin-left: 8px;
+}
+
+.separatorInput:focus {
+  outline: none;
+  border-color: #6e8efb;
+  box-shadow: 0 0 6px rgba(110,142,251,0.7);
 }
 
 @keyframes fadeInUp {
@@ -212,4 +279,21 @@ body {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@media (max-width: 540px) {
+  .options {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .checkboxLabel {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .modeButtons {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
