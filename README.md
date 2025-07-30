@@ -55,12 +55,17 @@ cargo run
 
 # O servidor estará disponível em: http://localhost:8080
 
-🌐 2. Inicie o frontend (React + Vite)
+🌐 **2. Iniciando o Frontend (React + Vite)**
 
+```bash
+# Windows / macOS / Linux
 cd frontend
-npm install   # ou yarn
-npm run dev   # ou yarn dev
-A interface será aberta em: http://localhost:5173
+
+# Windows / macOS / Linux – Instale as dependências:
+npm install     # ou use: yarn
+
+# Windows / macOS / Linux – Inicie o servidor de desenvolvimento:
+npm run dev     # ou use: yarn dev
 
 🔁 Comunicação entre Frontend e Backend
 O frontend se conecta com o backend através da rota:
