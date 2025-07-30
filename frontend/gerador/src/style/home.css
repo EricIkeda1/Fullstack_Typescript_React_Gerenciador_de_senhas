@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,77 +10,124 @@ body {
 
 .container {
   background-color: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 400px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
   text-align: center;
-  color: #333; 
+  color: #333;
 }
 
 .title {
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.slider-group {
   margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+}
+
+.slider-label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .rangeInput {
   width: 100%;
-  margin-top: 10px;
+  accent-color: #6e8efb;
 }
 
 .options {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   margin: 20px 0;
-  justify-content: center;
 }
 
-.options label {
+.checkboxLabel {
   display: flex;
   align-items: center;
-  gap: 4px;
-  color: #333; 
-  font-size: 14px;
+  gap: 6px;
+  font-size: 15px;
 }
 
 .buttonGenerate {
-  background-color: #111;
-  color: #fff;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
   border: none;
-  padding: 12px;
+  padding: 14px;
   font-size: 16px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   width: 100%;
-  font-weight: bold;
 }
 
 .buttonGenerate:hover {
-  background-color: #333;
+  filter: brightness(1.1);
 }
 
 .errorText {
-  color: red;
+  color: #e74c3c;
   margin-top: 10px;
 }
 
 .passwordResult {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #e9f5ff;
-  border: 1px solid #bcdffb;
-  border-radius: 8px;
-  font-size: 18px;
+  margin-top: 25px;
+  padding: 16px;
+  background-color: #f4faff;
+  border: 1px solid #d0e9ff;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
   word-break: break-word;
-  font-family: monospace;
-  user-select: all;
-  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.copyButton {
+  background-color: #6e8efb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.copyButton:hover {
+  background-color: #5a76e0;
+}
+
+.passwordStrength {
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.passwordStrength.fraca {
+  background-color: #ffe5e5;
+  color: #c0392b;
+}
+
+.passwordStrength.média {
+  background-color: #fff5cc;
+  color: #e67e22;
+}
+
+.passwordStrength.forte {
+  background-color: #e0ffe0;
+  color: #27ae60;
 }
