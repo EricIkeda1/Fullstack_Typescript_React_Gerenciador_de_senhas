@@ -57,15 +57,14 @@ cargo run
 
 🌐 **2. Iniciando o Frontend (React + Vite)**
 
-```bash
 # Windows / macOS / Linux
 cd frontend
 
 # Windows / macOS / Linux – Instale as dependências:
-npm install     # ou use: yarn
+npm install ou use: yarn
 
 # Windows / macOS / Linux – Inicie o servidor de desenvolvimento:
-npm run dev     # ou use: yarn dev
+npm run dev ou use: yarn dev
 
 🔁 Comunicação entre Frontend e Backend
 O frontend se conecta com o backend através da rota:
