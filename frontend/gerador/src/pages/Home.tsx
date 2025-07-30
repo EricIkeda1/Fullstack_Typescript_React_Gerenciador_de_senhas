@@ -78,6 +78,7 @@ export default function Home() {
           value={tamanho}
           onChange={(e) => setTamanho(Number(e.target.value))}
           className="rangeInput"
+          style={{ '--progress': `${((tamanho - 4) / 60) * 100}%` } as React.CSSProperties}
         />
       </div>
 

@@ -17,6 +17,7 @@ body {
   max-width: 450px;
   text-align: center;
   color: #333;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .title {
@@ -37,8 +38,50 @@ body {
 }
 
 .rangeInput {
+  -webkit-appearance: none;
   width: 100%;
-  accent-color: #6e8efb;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    #6e8efb 0%,
+    #6e8efb var(--progress),
+    #3a3a3a var(--progress),
+    #3a3a3a 100%
+  );
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #6e8efb;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.rangeInput::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background-color: #5a76e0;
+}
+
+.rangeInput::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #6e8efb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.rangeInput::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background-color: #5a76e0;
 }
 
 .options {
@@ -66,6 +109,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  animation: pulse 1.8s infinite;
 }
 
 .buttonGenerate:hover {
@@ -75,6 +119,7 @@ body {
 .errorText {
   color: #e74c3c;
   margin-top: 10px;
+  animation: fadeIn 0.3s ease-in;
 }
 
 .passwordResult {
@@ -91,6 +136,7 @@ body {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .copyButton {
@@ -101,11 +147,15 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.1s;
 }
 
 .copyButton:hover {
   background-color: #5a76e0;
+}
+
+.copyButton:active {
+  transform: scale(0.95);
 }
 
 .passwordStrength {
@@ -115,6 +165,7 @@ body {
   border-radius: 6px;
   text-align: center;
   font-size: 14px;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .passwordStrength.fraca {
@@ -130,4 +181,35 @@ body {
 .passwordStrength.forte {
   background-color: #e0ffe0;
   color: #27ae60;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(167, 119, 227, 0.4);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(167, 119, 227, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(167, 119, 227, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
